@@ -1,0 +1,45 @@
+/**
+*
+* Global
+*
+**/
+
+*,
+*::before,
+*::after {  }
+
+html,
+body,
+button { -moz-osx-font-smoothing:grayscale; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; }
+
+html,
+body { width:100%; height:100%; margin:0; padding:0; }
+body { position:relative; background-color:#fbfbfb; min-height:100%; }
+
+
+
+
+
+
+
+.banner { @include center($max_width); }
+.wrapper { @include center; }
+.wrapper-large { @include center($max_width); }
+.main { overflow:hidden; position:relative; z-index:1; }
+
+.main-content { margin:1em auto 200px; }
+.main .title-page {  }
+
+
+
+
+
+
+
+
+
+/* 
+ * Theme colors
+ */
+.dark { color:$colorDark; }
+.grey { color:$colorGrey; }

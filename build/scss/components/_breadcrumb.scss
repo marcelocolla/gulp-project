@@ -1,0 +1,11 @@
+/**
+*
+* Breadcrumb
+*
+**/
+
+.breadcrumbs { position:relative; z-index:1; text-transform:uppercase; padding:20px 0; margin-bottom:2em; }
+.breadcrumbs .breadcrumb-item { line-height:40px; margin-right:5px; display:inline-block; *float:left; }
+.breadcrumbs a { color:inherit; }
+.breadcrumbs .ico,
+.breadcrumbs a:hover { color:$colorDark; }

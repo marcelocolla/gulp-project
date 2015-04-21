@@ -1,0 +1,29 @@
+
+
+
+.header { position:relative; z-index:99; }
+.header .app-bar-top { padding:47px 0;  }
+.header .logo { float:left; display:block; }
+.header .logo a { display:block; @include transition; @include cf; @include opacity(1); }
+
+
+/* Head / right */
+.header .bar-right { max-width:58%; float:right; }
+
+
+
+
+
+
+
+
+/* 
+ * Menu
+ */
+.nav-container { position:relative; z-index:1; }
+
+
+
+
+
+

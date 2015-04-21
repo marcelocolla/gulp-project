@@ -1,0 +1,195 @@
+/******************************************************************** 
+Project:Formee - http://www.formeeee.org Launched: Version:3.1 
+Authors:
+	Bernard De Luna - http://www.bernarddeluna.com 
+	Daniel Araujo - http://www.dnlaraujo.com.br 
+	Marcello Manso - http://www.marcellomanso.com.br
+
+Structure ********************************************************************/
+
+
+::-webkit-input-placeholder { color:#686868; font-size:15px; }
+:-moz-placeholder { color:#686868; font-size:15px; }
+::-moz-placeholder { color:#686868; font-size:15px; }
+:-ms-input-placeholder { color:#686868; font-size:15px; }
+
+
+/* Little CSS Reset to preserv form structure */ /* fix  ff bugs */ 
+.formee:after, .formee div:after, .formee ol:after, .formee ul:after, .formee li:after, .formee dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0; overflow:hidden; }
+
+/* Form Structure */ 
+.formee {margin:0; padding:0;}
+.formee fieldset { border:none; position:relative; }
+.formee legend { padding:0.5em 0 1.2em; }
+
+/* Field Grid */ 
+.grid-1-12, .grid-2-12, .grid-3-12, .grid-4-12, .grid-5-12, .grid-6-12, .grid-7-12, .grid-8-12, .grid-9-12, .grid-10-12, .grid-11-12, .grid-12-12 { position:relative; margin-bottom:12px; padding:0; height:100%; }
+.formee .field {  }
+
+/* 12-column Grid (thanks for Fluid 960 Grid System) */ 
+.grid-1-12 { @include column(1/12, $gutter:2, $cycle:12); }
+.grid-2-12 { @include column(2/12, $gutter:2); }
+.grid-3-12 { @include column(3/12, $gutter:2, $cycle:4); }
+.grid-4-12 {width:30.333%;}
+.grid-5-12 {width:38.666%;}
+.grid-6-12 { @include column(6/12, $gutter:2, $cycle:2); }
+.grid-7-12 {width:55.333%;}
+.grid-8-12 {width:63.666%;}
+.grid-9-12 {width:72%;}
+.grid-10-12 {width:80.333%;}
+.grid-11-12 {width:88.666%;}
+.grid-12-12 { @include column(12/12); }
+
+/* first item */ 
+.formee .alpha {margin-left:0;}
+
+/* last item */ 
+.formee .omega {margin-right:0;}
+
+/* clear */ 
+.formee .clear {clear:both;}
+
+/* input without label */ 
+.formee-no-lbl {position:relative;padding-bottom:0;}
+
+/* input without label */ 
+.formee-no-lbl input, .formee-no-lbl label, .formee-no-lbl span, .formee-no-lbl ul, .formee-no-lbl p {position:absolute;bottom:0;}
+
+/* multiple containers inside field-grid */ 
+.formee .left {clear:none; float:left !important; margin-right:0.3em !important; }
+.formee .right {clear:none; float:right !important; margin-left:0.3em !important; }
+
+/* form elements  */ 
+.formee-lbl, 
+.formee label { display:block; height:auto; margin:0.2em 0 0.5em; }
+.formee .formee-txt,
+.formee input, 
+.formee textarea, 
+.formee select,
+.heapBox .holder{ vertical-align:middle; line-height:1.1em; width:100%; padding:15px 20px; border-style:solid; border-width:1px; @include box-sizing; @include border-radius(0.5em); /*ie7*/ *width:99%; }
+
+.formee input[type="radio"],
+.formee input[type="checkbox"] { width:auto; padding:0; }
+
+
+.formee textarea { height:auto; }
+.formee select { height:50px; padding:10px 15px; background:url(../img/icon/ico-down.png) no-repeat 96% 50%; @include css3-prefix(appearance, none); }
+.formee-list .formee-lbl, .formee-list label {display:inline; height:auto; margin:0.5em 0 0.8em 2px; }
+.formee-req {position:relative; top:3px; }
+.formee-msg-info, .formee-msg-warning, .formee-msg-error, .formee-msg-success {padding:20px 20px 15px 38px; border:1px solid #ccc; display:block; height:auto; margin:0 1.5% 0.8em; clear:both; }
+.formee-msg-info li, .formee-msg-warning li, .formee-msg-error li, .formee-msg-success li {list-style:none; padding:0; margin-bottom:.4%; font-size:1.4em; line-height:1.1em; vertical-align:top; }
+
+/* form button  */ 
+.formee-button, 
+.formee input[type="submit"], 
+.formee input[type="button"], 
+.formee input[type="reset"] { padding:10px 20px 8px; cursor:pointer; text-align:center; display:inline-block; border:none;
+@include border-radius($radius); }
+.formee .button-full { width:100%; padding-left:0; padding-right:0; text-align:center; }
+
+/* lista de chk e rdo */ 
+.formee-list {height:100%; list-style:none; padding:0; margin:0; }
+.formee-list li, .formee-list li {margin:0.5em 0.6em 0.8em; float:left; display:inline-block; list-style:none; }
+.formee-list input {margin-right:0.2em}
+
+/* input size */ 
+.formee-small {width:30% !important; float:left; margin-right:10px; display:inline; /*ie7*/ *width:25% !important; }
+.formee-medium {width:50% !important; float:left; margin-right:10px; display:inline; /*ie7*/ *width:45% !important; }
+
+
+
+/******************************************************************** Project:Formee - http://www.formeeee.org Last Updated:Version:3.1 Authors:Bernard De Luna - http://www.bernarddeluna.com Daniel Araujo - http://www.dnlaraujo.com.br Marcello Manso - http://www.marcellomanso.com.br ******************************************************************** Style ********************************************************************/ 
+.formee fieldset {  }
+
+/* hover effect */
+.field-button:hover { background:transparent;}
+
+
+/* Form legend and titles */ 
+.formee legend, 
+.formee .legend { font-size:1em; line-height:1.2em; letter-spacing:-.035em; color:$colorDark; font-weight:700; white-space:normal; width:100%; }
+.formee .align-left { text-align:left; }
+.formee .small { font-size:1.5em; }
+
+/* form elements  */ 
+.formee-lbl, .formee label { color:#2b2b2b; font-size:1.1em; line-height:1.2em; vertical-align:middle; }
+.formee .no-label { margin-top:31px; }
+.formee-req { font-weight:bold; font-style:normal; color:#d10000; font-size:1.2em; }
+.formee .formee-txt, 
+.formee input, 
+.formee textarea, 
+.formee select,
+.heapBox .holder { border-color:#d1d1d3; background-color:#fff; color:#898989; font-size:1.05em; }
+.heapBox .holder {  }
+
+.formee .formee-txt:hover, 
+.formee input:hover, 
+.formee textarea:hover, 
+.formee select:hover { color:#555; background-color:#f9f9f9; border-color:#999; }
+
+form .formee-txt:focus, 
+.formee input:focus, 
+.formee textarea:focus, 
+.formee select:focus  { color:$colorDark; background-color:darken($colorGrey, 1); border-color:darken($colorGrey, 1) !important; outline:0; }
+
+/* form msg status  */ 
+.formee-msg { display:none; visibility:hidden; }
+.formee-msg.show { display:block; visibility:visible; }
+.formee-msg.info, 
+.formee-msg.warning, 
+.formee-msg.error, 
+.formee-msg.success { color:#2b2b2b; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }
+
+.formee-msg.info h3, 
+.formee-msg.warning h3, 
+.formee-msg.error h3, 
+.formee-msg.success h3 { font-size:2em; line-height:1.1em; letter-spacing:-.02em; padding:0; margin:0 0 .3em 0; }
+
+.formee-msg.info { background:#d1ecf7 url(../img/form-ic-info.png) no-repeat 12px 23px; border-color:#bcdfef; }
+.formee-msg.warning { background:#fff6bf url(../img/form-ic-warning.png) no-repeat 12px 23px; border-color:#fceb77; }
+.formee-msg.error { background:#fad0d0 url(../img/form-ic-error.png) no-repeat 12px 23px; border-color:#f6abab; }
+.formee-msg.success { background:#e5f8ce url(../img/form-ic-success.png) no-repeat 12px 23px; border-color:#d0f1a6; }
+.formee-msg.success strong, .formee-msg.success a{color:#62b548;}
+.formee-msg.info strong, .formee-msg.info a { color:#11689e;}
+.formee-msg.warning strong, .formee-msg.warning a { color:#957210;}
+.formee-msg.error strong, .formee-msg.error a { color:#b01717;}
+
+
+/* form validation */ 
+.formee-error { border-color:#FAD0D0 !important; color:#b01717 !important; -moz-box-shadow:0 0 3px 0 rgba(176,23,23,.4); -webkit-box-shadow:0 0 3px 0 rgba(176,23,23,.4); box-shadow:0 0 3px 0 rgba(176,23,23,.4); }
+
+
+/* form buttons */ 
+.formee-button, 
+.formee input[type="submit"], 
+.formee input[type="button"], 
+.formee input[type="reset"] { width:auto; font-family:$fontDefault; font-size:1em; line-height:2em; letter-spacing:0.05em; color:#fff; background-color:$colorDark; }
+
+
+a.formee-button:hover, 
+.formee-button:hover, 
+.formee input[type="submit"]:hover, 
+.formee input[type="button"]:hover, 
+.formee input[type="reset"]:hover { background-color:$colorDark; color:$colorWhite; @include transition; }
+
+
+
+
+
+@media only screen and (max-width:780px) {
+
+	.formee .grid-6-12 { @include stack; }
+
+	.formee .formee-txt,
+	.formee input, 
+	.formee textarea, 
+	.formee select,
+	.heapBox .holder { padding:12px 8px; }
+
+	/* form buttons */ 
+	.formee-button, 
+	.formee input[type="submit"], 
+	.formee input[type="button"], 
+	.formee input[type="reset"] { width:100%; }
+
+}

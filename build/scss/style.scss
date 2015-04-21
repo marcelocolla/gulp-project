@@ -1,0 +1,50 @@
+
+// Mixins/Settings
+@import 'partials/_config';
+@import 'partials/_css3-mixins';
+@import 'partials/jeet/index';
+
+
+
+/**
+* Main Stylesheet For Visual Style Guide
+**/
+@import 'partials/_normalize';
+@import 'partials/_helper';
+@import 'partials/_global';
+
+
+
+// Components
+@import 'components/_typography';
+@import 'components/_link';
+@import 'components/_breadcrumb';
+@import 'components/_media';
+@import 'components/_button';
+@import 'components/_list';
+@import 'components/_icons';
+@import 'components/_slider';
+@import 'components/_table';
+
+
+
+
+
+// Structure
+@import 'components/_header';
+@import 'components/_content';
+@import 'components/_footer';
+
+
+
+
+// Vendor
+@import 'vendor/_formee';			// Formee
+@import 'vendor/_light-gallery'; 	// Zoom gallery
+@import 'vendor/_slick'; 			// slider
+
+
+
+
+// @media-queries
+@import 'partials/_breakpoints';
